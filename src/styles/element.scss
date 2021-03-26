@@ -1,0 +1,42 @@
+.el-submenu__title .svg-icon {
+  margin-right: 20px;
+}
+.el-submenu .el-menu-item {
+  background-color: #f2f2f2;
+  color: #999;
+  &::before {
+    display: inline-block;
+    content: "";
+    width: 3px;
+    height: 3px;
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: #999999;
+  }
+}
+.el-submenu > .el-submenu__title.is-active,
+.el-submenu .el-menu-item.is-active {
+  background-color: #2993ff;
+  color: #ffffff;
+  &::before {
+    background-color: #ffffff;
+  }
+}
+// menu hover
+.el-submenu__title {
+  position: relative;
+  &:hover {
+    background-color: #ffffff;
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 5px;
+      height: 100%;
+      background-color: #2993ff;
+      position: absolute;
+      left: 0;
+      z-index: 3;
+    }
+  }
+}
